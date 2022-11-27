@@ -1,0 +1,108 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.banner{
+    display: grid;
+    grid-template-areas:
+        'hero hero feature1'
+        'hero hero feature2';
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 350px;
+    background-image: url('image/photo1 (4).jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.hero > *{
+    display: none;
+}
+
+.features{
+    background-color: black;
+    color: wheat;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature1;
+    background-image: url('image/photo1 (1).jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature2;
+    background-image: url('image/photo1 (5).jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.services {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.service {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    border: solid 1px #aaa;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+    .service .icon {
+        font-size: 3em;
+    }
+
+    .service p {
+        letter-spacing: 1px;
+        font-size: 0.8em;
+        font-weight: 100;
+    }
+
+.gallery {
+    order: 4;
+    display: grid;
+    gap: 5px;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+    .gallery h2 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+        grid-column: 1 / -1;
+    }
+@media screen and (max-width: 690px){
+    .hero > *{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 10px;
+        background-color: #000;
+        color: aliceblue;
+    }
+    .banner {
+        grid-template-areas:
+            'hero'
+            'feature1'
+            'feature2';
+    }
+}

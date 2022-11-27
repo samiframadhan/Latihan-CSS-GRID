@@ -1,0 +1,35 @@
+﻿<div class="nav-container">
+    <div class="title">
+        <h4>Weather App</h4>
+    </div>
+
+    <div class="hamburger" onclick="@ToggleNavMenu">
+        <div class="@HamburgerCssClass">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <ul class="@NavMenuCssClass">
+        <li><a href="/">Home</a></li>
+        <li><a href="/forecast">Weather Forecast</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/counter">Counter</a></li>
+        <li><a href="/about">About</a></li>
+    </ul>
+    
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? null : "collapse";
+
+    private string? HamburgerCssClass => collapseNavMenu ? "closed" : "collapsed";
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
