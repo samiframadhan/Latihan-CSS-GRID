@@ -104,7 +104,7 @@
     .nav-container ul{
         display: none;
         position: absolute;
-        top: 10vh;
+        top: 50px;
         width: 100vw;
         justify-content: center;
     }
@@ -114,7 +114,6 @@
             flex-wrap: wrap;
             flex-direction: column;
             justify-content: center;
-            transition: all 1s;
         }
 }
 
