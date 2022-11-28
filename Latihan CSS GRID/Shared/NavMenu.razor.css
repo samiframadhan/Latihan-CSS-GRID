@@ -95,6 +95,7 @@
 @media screen and (max-width: 690px){
     .hamburger {
         display: flex;
+        z-index: 999;
     }
 
     .nav-container {
@@ -103,8 +104,8 @@
     .nav-container ul{
         display: none;
         position: absolute;
-        top: 0;
-        height: 100%;
+        top: 12vh;
+        width: 100vw;
         justify-content: center;
     }
 
